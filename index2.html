@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkpoint2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montagu+Slab:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <title>Itacity Forms</title>
+</head>
+
+<body>
+    <header>
+        <nav id="nav-bar">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Bras%C3%A3o_de_Armas_de_Itagua%C3%AD.jpg"
+                alt="Brasão Itaguaí">
+            <h1 id="titulo">Bem Vindo à Itaguaí, o coração da Costa Verde</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Bras%C3%A3o_de_Armas_de_Itagua%C3%AD.jpg"
+                alt="Brasão Itaguaí">
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <div class="container-dados">
+                <h1>Contato Turístico</h1>
+                <div>
+                    <label class="label-texto" for="nome">Nome:</label>
+                    <input type="text" placeholder=" Ex.:" name="nome" class="campo" id="nome" maxlength="100">
+                </div><br>
+                <div>
+                    <label class="label-texto" for="email">Email:</label>
+                    <input type="text" placeholder=" Ex.: abc@gmail.com" name="email" class="campo" id="email">
+                </div><br>
+                <div>
+                    <label class="label-texto" for="celular">Tel/Cel:</label>
+                    <input type="text" placeholder=" Ex.: +5521969699696" name="celular" class="campo" id="celular">
+                </div><br>
+                <div>
+                    <label class="label-texto" for="data">Data Nasc.:</label>
+                    <input type="date" name="data" class="campo" id="data">
+                </div><br>
+                <div class="container-idade">
+                    <p class="label-texto">Você é maior de idade?</p>
+                    <input type="radio" name="idade" value="+18" class="campo" id="idade">
+                    <label class="label-texto" for="+18">Sim</label>
+                    <input type="radio" name="idade" value="+18" class="campo" id="idade">
+                    <label class="label-texto" for="+18">Não</label>
+                </div>
+                <span>
+                    <label class="label-texto" for="interesse">Escolha um ponto do seu interesse na cidade:</label>
+                    <select class="label-texto" name="interesse" id="interesse">
+                        <option value="pvc">Praça Vicente Cicarino</option>
+                        <option value="expo">Parque Municipal (Área da Expo)</option>
+                        <option value="coroa">Praia de Coroa Grande</option>
+                    </select>
+                </span>
+                <div id="container-motivo">
+                    <label class="label-texto" for="interesse">Motivo da visita à cidade:</label>
+                    <span id="checkboxes-motivo">
+                        <input type="checkbox" name="turista" value="interesse" class="campo" id="turista"><label
+                            for="turista">&nbsp;Turismo</label>
+                        <input type="checkbox" name="residente" value="interesse" class="campo" id="residente"><label
+                            for="residente">&nbsp;Moradia</label>
+                        <input type="checkbox" name="estudante" value="interesse" class="campo" id="estudante"><label
+                            for="estudante">&nbsp;Estudo</label>
+                    </span>
+                </div>
+                <div id="container-buttons">
+                    <button type="submit" class="pushable">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front">Enviar</span>
+                    </button>
+                    <button type="submit" class="pushable">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front">Resetar</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <a href="http://    "></a>
+            <h3>Redes Sociais</h3>
+            <div class="icones">
+                <a id="icone-ig" href="https://www.instagram.com/prefeituraitaguai/?hl=pt" target="blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/96/Instagram.svg"
+                        alt="ícone instagram"></a>
+                <a id="icone-ig" href="https://pt-br.facebook.com/prefeituraitaguai/" target="blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg"
+                        alt="ícone instagram"></a>
+            </div>
+            <p>Desenvolvido por SINGULARITEC</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

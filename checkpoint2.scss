@@ -1,0 +1,273 @@
+$h1Cor: rgb(43, 0, 255);
+$bg: rgba(234, 232, 232, 0.8);
+$fontePrincipal:'Lora', serif;
+$fonteSecundaria:'Montagu Slab', serif;
+$textoFormCor:#3E065F;
+
+* {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    body {
+        background-image: url(./FotoItaguaiCheckpoint.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        
+        header { 
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+
+            #nav-bar {
+                background: $bg;
+                border-radius: 8px;
+                padding: 20px 0;
+                
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly; 
+                
+                >img {
+                   width: 35px; 
+                }
+                        
+                #titulo {
+                    font-family: $fontePrincipal;
+                    color: $h1Cor;
+                    text-align: center;
+                }
+            }
+        }
+
+        main {
+            margin-top: 15px;
+            margin-bottom: 20px;
+
+            >form {
+                margin-top: 40px;
+
+                display: grid;
+                grid-template-columns: 23% 54% 23%;
+                grid-template-rows: 20% 20% 20% 20% 20%;
+                grid-template-areas:
+                "d a e "
+                "d b e "
+                "d b e "
+                "d b e "
+                "d c e "
+                ;                  
+
+                .container-dados {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                                        
+                    grid-area: b;
+                    gap: 10px;
+
+                    font-family: $fontePrincipal;
+                    background-color: rgba(45, 154, 238, 0.8);
+                    
+                    padding: 15px;
+                    border-radius: 8px;
+                    background: linear-gradient(145deg, rgba(45, 154, 238, 0.8), #30a5ff);                 
+
+                    >h1 {
+                        grid-area: a;
+                        padding-bottom: 5px;
+                        
+                        font-family: $fonteSecundaria;
+                        color: $textoFormCor;
+                    }    
+                    
+                    .label-texto {
+                        color: $textoFormCor;
+                        font-family: $fonteSecundaria;
+                        font-weight: 500;
+                        font-size: 18px;
+
+                    }
+
+                    .campo {
+                        border: 1.5px solid green;
+                        border-radius: 2px;
+
+                        &:hover {
+                           animation: 0.25s linear 0s 1 alternate both expansao;
+                           
+                           @keyframes expansao {
+                                100% {transform: scale(1.2,1.2);}
+                           }
+                        }
+                    }
+
+                    .container-idade {
+                        display: flex;
+                        gap: 10px;
+
+                    }
+                              
+                    #container-motivo {
+                       
+                        #checkboxes-motivo {
+                            color: #3E065F;
+                            font-family: $fonteSecundaria;
+                            font-weight: 500;
+        
+                        }
+                    }     
+                }
+
+                #container-buttons {
+                    display: flex;
+                    align-items: center;
+
+                    grid-area: c;
+                    gap: 20px;
+                
+                    .pushable {
+                        position: relative;
+                        border: none;
+                        background: transparent;
+                        padding: 0;
+                        cursor: pointer;
+                        outline-offset: 4px;
+                        transition: filter 250ms;
+
+                        &:hover {
+                            filter: brightness(110%);
+
+                            .front {
+                                transform: translateY(-6px);
+                                transition: transform
+                          250ms
+                          cubic-bezier(.3, .7, .4, 1.5);
+                            }
+
+                            .shadow {
+                                transform: translateY(4px);
+                                transition: transform
+                          250ms
+                          cubic-bezier(.3, .7, .4, 1.5);
+                            }
+                        }
+
+                        &:active {
+
+                            .front {
+                                transform: translateY(-2px);
+                                transition: transform 34ms;
+                            }
+
+                            .shadow {
+                                transform: translateY(1px);
+                                transition: transform 34ms;
+                            }
+                        }
+
+                        &:focus {
+
+                            &:not(:focus-visible) {
+                                outline: none;
+                            }
+                        }
+                    }
+
+                    .shadow {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 12px;
+                        background: hsl(250, 100%, 50%) /0.70 ;
+                        will-change: transform;
+                        transform: translateY(2px);
+                        transition: transform
+                          600ms
+                          cubic-bezier(.3, .7, .4, 1);
+                    }
+                    
+                    .edge {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 12px;
+                        background: linear-gradient(
+                          to left,
+                          hsl(340, 100%, 16%) 0%,
+                          hsl(340, 100%, 32%) 8%,
+                          hsl(340, 100%, 32%) 92%,
+                          hsl(340, 100%, 16%) 100%
+                        );
+                    }
+                    .front {
+                        display: block;
+                        position: relative;
+                        padding: 12px 42px;
+                        border-radius: 12px;
+                        font-size: 1.25rem;
+                        color: white;
+                        background: hsl(345, 100%, 47%);
+                        will-change: transform;
+                        transform: translateY(-4px);
+                        transition: transform
+                          600ms
+                          cubic-bezier(.3, .7, .4, 1);
+                    }                                                     
+                }
+            } 
+        }
+        
+        footer { 
+            position: relative;
+            bottom: -54px;
+
+            .rodape {
+
+                background: black;
+
+                >h4 {
+                    font-family: $fontePrincipal;
+                    padding: 0px 32px;
+                                    
+                }
+
+                >h3 {
+                    text-align: center;
+                    font-family: $fontePrincipal;
+                    color: white;
+
+                }
+
+                .icones {
+                    display: flex;
+                    justify-content: center;   
+                    align-items: center;
+                                      
+
+                    >a {
+                       width: 50px;
+                       margin: 10px 15px;
+                
+                    }
+                }
+
+                >p {
+                    font-family: $fonteSecundaria;
+                    color: white;
+                    text-align: center;
+                    padding-bottom: 10px;
+
+                }
+            }     
+        }  
+    }   
+}
